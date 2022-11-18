@@ -1,0 +1,16 @@
+﻿@model otopark_otomasyonu.Models.Siniflar.Kisi_bilgisi
+@{
+    ViewBag.Title = "KisileriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Kişileri Güncelle</h2>
+<hr/>
+
+@using(Html.BeginForm("KisileriGüncelle","Admin", FormMethod.Post))
+            {
+    @Html.LabelFor(x=> x.Kisi_ID)
+    @Html.TextBoxFor(x=>x.Kisi_ID,new{ @class="form-control", @readonly="readonly"})
+
+            }
+

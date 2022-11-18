@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "AracGoster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>KİŞİ ARACI KAYIT</h4>
+                <p class="center light">Kişilerin Araçlarını Kayıt Edebildikleri Alan</p>
+                <hr class="hr">
+                <div class="row">
+                    <form class="col s12" method="post">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input name="Kisi_ID" type="number" class="validate">
+                                <label for="Kisi_ID">Araç Kime Ait - ID</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input placeholder="Plaka" name="Plaka" type="text" class="validate">
+                                <label for="Plaka" class="active">Araç Bilgileriniz</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input name="Marka_ID" type="text" class="validate">
+                                <label for="Marka_ID">Markası</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">people_outline</i>
+                                <input name="Renk" type="text" class="validate">
+                                <label for="Renk">Rengi</label>
+                            </div>
+                        </div>
+                        <div class="col m12 s12">
+                            <button type="submit" class="waves-effect waves-light btn btn-small red lighten-2"><i class="material-icons left">chevron_right</i><i class="material-icons right">chevron_left</i>Aracınızı Kayıt Edin !</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--================End Services_area =================-->
+<!-- Section 1 Bitiş-->

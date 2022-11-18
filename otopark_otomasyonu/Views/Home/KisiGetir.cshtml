@@ -1,0 +1,45 @@
+﻿@model otopark_otomasyonu.Models.Siniflar.Kisi_bilgisi
+@{
+    ViewBag.Title = "KisiGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col m12">
+            <h4 class="center">KİŞİ GÜNCELLE</h4>
+            <p class="center light">Verilerinizi Güncelleyebilirsiniz.</p>
+            <hr />
+            @using (Html.BeginForm("KisiyiGuncelle", "Home", FormMethod.Post))
+            {
+                @Html.TextBoxFor(m => m.Kisi_ID, new { @class = "validate hide" })
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        @Html.TextBoxFor(m => m.Ad_soyad, new { @class = "validate" })
+                        <label for="Ad_soyad">Ad Soyad</label>
+                    </div>
+                    <div class="input-field col s6">
+                        @Html.TextBoxFor(m => m.Telefon, new { @class = "validate" })
+                        <label for="Telefon">Telefon</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "validate" })
+                        <label for="Email">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                        @Html.TextBoxFor(m => m.Tarih, new { @class = "validate" })
+                        <label for="Tarih">Tarih</label>
+                    </div>
+                </div>               
+                <div class="col center m12 s12">
+                    <button class="waves-effect waves-light btn btn-small red lighten-2"><i class="material-icons left">chevron_right</i><i class="material-icons right">chevron_left</i>Güncelle</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,49 @@
+﻿@using otopark_otomasyonu.Models.Siniflar
+@model List<Kisi_bilgisi>
+@{
+    ViewBag.Title = "otoparkcikis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Section 1 Bitiş-->
+<div class="container">
+    <div class="row">
+        <div class="col m12 s12">
+            <h4>Kişiler</h4>
+            <table class="highlight responsive-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        
+                        <th>Ad Soyad</th>
+                        <th>Telefon</th>
+                        <th>Email</th>
+                        <th>Tarih</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Kisi_ID -</td>
+                            <td>@item.Ad_soyad</td>
+                            <td>@item.Telefon</td>
+                            <td>@item.Email</td>
+                            <td>@item.Tarih</td>
+                            
+                            <td><a href="/Home/KisiGetir/@item.Kisi_ID" class="waves-effect waves-light btn">Güncelle</a></td>
+                            <td><a href="/Home/SIL/@item.Kisi_ID" class="waves-effect waves-light btn red darken-2">Kişi Sil</a></td>
+                        </tr>
+                    }
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<!-- Section 1 Bitiş-->

@@ -1,0 +1,56 @@
+﻿@using otopark_otomasyonu.Models.Siniflar
+@model List<Arac_bilgisi>
+@{
+    ViewBag.Title = "AracCikis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Section 1 Bitiş-->
+<div class="container">
+    <div class="row">
+        <div class="col m12 s12">
+            <h4>Otopark Araç Sil / Güncelle</h4>
+            <table class="highlight responsive-table">
+                <thead>
+                    <tr>
+                        <th>Aracın Numarası (ID)</th>
+                        <th>Araç Sahibi (ID)</th>
+                        <th>Aracın Sahibi Ad Soyad</th>
+                        <th>Aracın Sahibi Telefon</th>
+                        <th>Aracın Markası (ID)</th>
+                        <th>Plaka</th>
+                        <th>Yıl</th>
+                        <th>Aracın Rengi</th>
+                        <th>Araç Park Yeri (ID)</th>
+                        <th>Giriş Tarihi</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var itemm in Model)
+                    {
+                        <tr>
+                            <td>@itemm.Arac_ID -</td>
+                            <td>@itemm.Kisi_ID</td>
+                            <td>@itemm.Ad_soyad</td>
+                            <td>@itemm.Telefon</td>
+                            <td>@itemm.Marka_ID </td>
+                            <td>@itemm.Plaka </td>
+                            <td>@itemm.Yil </td>
+                            <td>@itemm.Renk </td>
+                            <td>@itemm.Py_ID </td>
+                            <td>@itemm.Giris_Tarihi </td>
+                            <td><a href="/Arac/AracGetir/@itemm.Arac_ID" class="waves-effect waves-light btn">Güncelle</a></td>
+                            <td><a href="/Arac/SIL/@itemm.Arac_ID" class="waves-effect waves-light btn red darken-2">Araç Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<!-- Section 1 Bitiş-->

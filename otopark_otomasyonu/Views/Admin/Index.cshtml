@@ -1,0 +1,28 @@
+﻿@using otopark_otomasyonu.Models.Siniflar
+@model List<Kisi_bilgisi>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>ID</th>
+        <th>Ad Soyad</th>
+        <th>Telefon</th>
+        <th>Email</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.Kisi_ID</td>
+        <td>@x.Ad_soyad </td>
+        <td>@x.Telefon</td>
+        <td>@x.Email</td>
+        <td>@x.Tarih</td>
+        <td><a href="#" class="btn btn-primary">Güncelle</a></td>
+    </tr>
+    }
+</table>
+
